@@ -1,0 +1,38 @@
+﻿@model BibliotecaVirtualdeDVDs.Models.DVD
+
+@{
+    ViewBag.Title = "Adicionar DVD";
+}
+
+<div class="col-md-8">
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Biblioteca Virtual de DVD's - @ViewBag.Title</h3>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="panel-body">
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Titulo, new { @class = "form-control", @id = "lblTitulo", @placeholder = "Título" })
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Ano, new { @class = "form-control", @id = "lblAno", @placeholder = "Ano" })
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Genero, new { @class = "form-control", @id = "lblGenero", @placeholder = "Gênero" })
+                </div>
+
+                <p>
+                    <input type="submit" class="btn btn-primary" value="Cadastrar DVD" />
+                </p>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,63 @@
+﻿@model  IList<BibliotecaVirtualdeDVDs.Models.DVD>
+
+<div id="content">
+    <table class="table table-hover">
+        <tr>
+            @{  
+                if (Session["ExibirTitulo"] != null)
+                {
+                <th>Título</th>
+                }
+
+                if (Session["ExibirAno"] != null)
+                {
+                <th>Ano</th>
+                }
+
+                if (Session["ExibirGenero"] != null)
+                {
+                <th>Gênero</th>
+                }
+            }
+            <th></th>
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                @{  
+                    if (Session["ExibirTitulo"] != null)
+                    {
+                            <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                    }
+
+                    if (Session["ExibirAno"] != null)
+                    {
+                            <td>@Html.DisplayFor(modelItem => item.Ano)</td>
+                    }
+
+                    if (Session["ExibirGenero"] != null)
+                    {
+                            <td>@Html.DisplayFor(modelItem => item.Genero)</td>
+                    }
+                }
+                <td>@Ajax.ActionLink("Excluir", "Apagar", item, new AjaxOptions { UpdateTargetId = "content", HttpMethod = "POST" })</td>
+            </tr>
+        }
+    </table>
+
+    <br />
+
+    <div id="status">
+        @{ 
+            BibliotecaVirtualdeDVDs.Models.DVD dvdItem = (BibliotecaVirtualdeDVDs.Models.DVD)ViewBag.DvdExcluido;
+            if (dvdItem != null)
+            {
+                this.Response.Write("<div class='alert alert-success' role='alert'>DVD ");
+                this.Response.Write("<strong>" + dvdItem.Titulo + "</strong> ");
+                this.Response.Write("excluído com sucesso!<br/>");
+                this.Response.Write("Horário: " + DateTime.Now.ToLongTimeString() + "</div>");
+            }
+        }
+    </div>
+</div>

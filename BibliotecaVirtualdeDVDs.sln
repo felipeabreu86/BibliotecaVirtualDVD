@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtualdeDVDs", "BibliotecaVirtualdeDVDs\BibliotecaVirtualdeDVDs.csproj", "{81AD534D-0027-4DFD-999B-E224C9F8E6EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81AD534D-0027-4DFD-999B-E224C9F8E6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AD534D-0027-4DFD-999B-E224C9F8E6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AD534D-0027-4DFD-999B-E224C9F8E6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AD534D-0027-4DFD-999B-E224C9F8E6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

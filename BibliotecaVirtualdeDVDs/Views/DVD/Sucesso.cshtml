@@ -1,0 +1,31 @@
+﻿@model BibliotecaVirtualdeDVDs.Models.DVD
+
+@{
+    ViewBag.Title = "Sucesso!";
+}
+
+<div class="col-md-8">
+    <br />
+    <br />
+    <div class="alert alert-success" role="alert">DVD Incluído com Sucesso!</div>
+
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="form-group">
+                <label>Título:</label>
+                <input class="form-control" id="inputTitulo" type="text" placeholder="@Model.Titulo" disabled>
+            </div>
+            <div class="form-group">
+                <label>Ano:</label>
+                <input class="form-control" id="inputAno" type="text" placeholder="@Model.Ano" disabled>
+            </div>
+            <div class="form-group">
+                <label>Gênero:</label>
+                <input class="form-control" id="inputGenero" type="text" placeholder="@Model.Genero" disabled>
+            </div>
+        </div>
+    </div>
+
+    <a href="javascript:window.history.go(-1)">Voltar</a>
+</div>

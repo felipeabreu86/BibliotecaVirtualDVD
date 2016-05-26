@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Configurações do Usuário";
+}
+
+<div class="col-md-8">
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Biblioteca Virtual de DVD's - @ViewBag.Title</h3>
+        </div>
+    </div>
+    <div>
+        Colunas a serem exibidas na lista:
+    </div>
+
+    @using (Html.BeginForm("ConfiguracoesUsuario", "DVD", FormMethod.Post))
+    {
+        <div class="checkbox">
+            <label>
+                @{
+                    if (Session["ExibirTitulo"] == null)
+                    {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirTitulo">
+                    } else {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirTitulo" checked>
+                    }
+                }
+                Título
+            </label>
+        </div>
+        
+        <div class="checkbox">
+            <label>
+                @{
+                    if (Session["ExibirAno"] == null)
+                    {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirAno">
+                    } else {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirAno" checked>
+                    }
+                }
+                Ano
+            </label>
+        </div>
+        
+        <div class="checkbox">
+            <label>
+                @{
+                    if (Session["ExibirGenero"] == null)
+                    {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirGenero">
+                    } else {
+                        <input type="checkbox" name="AtributosDvd" value="ExibirGenero" checked>
+                    }
+                }
+                Gênero
+            </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Configurar Preferências</button>
+    }
+</div>

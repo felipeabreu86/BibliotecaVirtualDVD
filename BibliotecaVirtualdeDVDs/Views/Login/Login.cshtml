@@ -1,0 +1,44 @@
+﻿@model BibliotecaVirtualdeDVDs.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<br />
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Login</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+        <br />
+        <p>
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<script type="text/javascript">
+    var notification =
+        alertify.notify(
+        'Login: ' + '@ViewBag.Email' + ' <br> Senha: ' + '@ViewBag.Senha', 'success', 15, function () {
+            console.log('dismissed');
+        });
+</script>

@@ -1,0 +1,32 @@
+﻿@model IList<BibliotecaVirtualdeDVDs.Models.DVD>
+
+@{
+    ViewBag.Title = "DVD's Cadastrados";
+}
+
+<div class="col-md-8">
+    <br />
+
+    @{  
+        if (Session["ExibirTitulo"] == null && Session["ExibirAno"] == null && Session["ExibirGenero"] == null)
+        {
+            <div class="alert alert-warning" role="alert">
+                Altere as
+                @Html.ActionLink("Configurações de Visualização", "ConfiguracoesUsuario", "DVD", new { @class = "alert-link" })
+                para ver o Conteúdo.
+            </div>    
+        }
+        else
+        {            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Biblioteca Virtual de DVD's - @ViewBag.Title</h3>
+                </div>
+            </div>
+        
+            <div id="content">
+                @Html.Partial("_ListarDvdsContent")
+            </div>
+        }
+    }
+</div>

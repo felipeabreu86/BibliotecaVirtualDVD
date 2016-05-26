@@ -1,0 +1,25 @@
+﻿@model BibliotecaVirtualdeDVDs.Models.DVD
+
+@{
+    ViewBag.Title = "Página de Erro";
+}
+
+<div class="col-md-8">
+
+    <br />
+    <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Biblioteca Virtual de DVD's - @ViewBag.Title
+    </div>
+
+    <h4>Por favor, corrija os seguintes erros:</h4>
+    <br />
+
+    <!-- Lista de Erros retornados via DataAnnotations e ModelState.AddModelError -->
+    @Html.ValidationSummary()
+
+    <br />
+    <a href="javascript:window.history.go(-1)">Voltar</a>
+
+</div>

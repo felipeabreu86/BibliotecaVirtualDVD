@@ -30,12 +30,12 @@ namespace BibliotecaVirtualdeDVDs.Models
 
     public class UserMetadado
     {
-        [Required(ErrorMessage = "O campo Usuário é de preenchimento obrigatório!")]
+        [Required(ErrorMessage = "O campo e-mail é de preenchimento obrigatório!")]
         [DataType(DataType.EmailAddress, ErrorMessage = "E-Mail não é válido")]
         [DisplayName("E-Mail")]
         public string email { get; set; }
 
-        [Required(ErrorMessage = "O campo Senha é de preenchimento obrigatório!")]
+        [Required(ErrorMessage = "O campo senha é de preenchimento obrigatório!")]
         [DataType(DataType.Password, ErrorMessage = "Senha inválida")]
         [DisplayName("Senha")]
         public string password { get; set; }

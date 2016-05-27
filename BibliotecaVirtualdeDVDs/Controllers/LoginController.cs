@@ -46,5 +46,12 @@ namespace BibliotecaVirtualdeDVDs.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return Login();
+        }
+
     }
 }

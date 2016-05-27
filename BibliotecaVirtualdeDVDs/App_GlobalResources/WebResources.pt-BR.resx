@@ -120,6 +120,9 @@
   <data name="id_home_titulo_principal" xml:space="preserve">
     <value>Biblioteca Virtual de DVD's - Início</value>
   </data>
+  <data name="id_logout" xml:space="preserve">
+    <value>Sair</value>
+  </data>
   <data name="id_menu_add_dvd" xml:space="preserve">
     <value>Adicionar DVD</value>
   </data>

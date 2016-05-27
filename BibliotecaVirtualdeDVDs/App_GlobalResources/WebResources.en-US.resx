@@ -120,6 +120,9 @@
   <data name="id_home_titulo_principal" xml:space="preserve">
     <value>Virtual Library of DVDs - Home</value>
   </data>
+  <data name="id_logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
   <data name="id_menu_add_dvd" xml:space="preserve">
     <value>Add DVD</value>
   </data>

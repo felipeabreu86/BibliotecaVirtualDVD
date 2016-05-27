@@ -6,7 +6,13 @@
 
 <br />
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Login",
+                       "Login",
+                       FormMethod.Post,
+                       new { @id = "frmLogin" }
+                       ))
+    {    
+    
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -30,7 +36,7 @@
         </div>
         <br />
         <p>
-            <input type="submit" class="btn btn-primary" value="Create" />
+            <input type="submit" class="btn btn-primary" value="Login" />
         </p>
     </fieldset>
 }
@@ -41,4 +47,10 @@
         'Login: ' + '@ViewBag.Email' + ' <br> Senha: ' + '@ViewBag.Senha', 'success', 15, function () {
             console.log('dismissed');
         });
+
+    document.getElementById('menuhome').setAttribute('class', 'active');
+    document.getElementById('menuConfiguracaoUsuario').removeAttribute('class', 'active');
+    document.getElementById('menuAdicionarDvd').removeAttribute('class', 'active');
+    document.getElementById('menuListarDvd').removeAttribute('class', 'active');
+
 </script>

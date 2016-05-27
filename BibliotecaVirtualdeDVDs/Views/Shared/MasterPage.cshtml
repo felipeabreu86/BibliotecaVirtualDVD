@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />s
+    <meta name="viewport" content="width=device-width" />
     <title>Biblioteca Virtual de DVD's - @ViewBag.Title</title>
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
     <link href="~/Content/alertify/css/alertify.min.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
 
         div.flag {
             padding-top: 8px;
-            margin-left: 480px;
+            margin-left: 600px;
         }
     </style>
 
@@ -29,7 +29,7 @@
                         @Html.ActionLink(@Resources.WebResources.id_menu_inicio, "Index", "Home")
                     </li>
                     <li id="menuConfiguracaoUsuario">
-                        @Html.ActionLink(@Resources.WebResources.id_menu_configuracoes, "ConfiguracoesUsuario", "DVD")
+                        @Html.ActionLink(@Resources.WebResources.id_menu_configuracoes, "ConfiguracoesUsuario", "DVD" )
                     </li>
                     <li id="menuAdicionarDvd">
                         @Html.ActionLink(@Resources.WebResources.id_menu_add_dvd, "Adicionar", "DVD")
@@ -37,6 +37,14 @@
                     <li id="menuListarDvd">
                         @Html.ActionLink(@Resources.WebResources.id_menu_list_dvd, "ListarDvds", "DVD")
                     </li>
+                    @{ 
+                        if (Session["user"] != null)
+                        { 
+                            <li id="menuLogout">
+                                @Html.ActionLink(@Resources.WebResources.id_logout, "Logout", "Login")
+                            </li>
+                        }
+                    }
                 </ul>
                 <div class="flag">
                     <a href="/Home/SetIdioma?culture=pt-BR"><img src="~/Content/imagens/brasil-flag.png" /></a>
@@ -57,3 +65,4 @@
     @RenderSection("script", required: false)
 </body>
 </html>
+

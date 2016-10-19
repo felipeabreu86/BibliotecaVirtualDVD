@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("BibliotecaVirtualdeDVDs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Accenture")]
+[assembly: AssemblyCompany("Felipe")]
 [assembly: AssemblyProduct("BibliotecaVirtualdeDVDs")]
-[assembly: AssemblyCopyright("Copyright © Accenture 2016")]
+[assembly: AssemblyCopyright("Copyright © Felipe 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
